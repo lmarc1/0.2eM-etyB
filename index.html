@@ -3,6 +3,8 @@
     <head>
 
         <title>Byte Me 2.0</title>
+        <script src="Sprite.js"></script>
+        <!-- Load all images used by the game in head then clear the page and use them in body-->
 
     </head>
 
@@ -11,6 +13,8 @@
         <canvas id="myCanvas" width="960" height="960" style="border:1px solid #d3d3d3;"></canvas>
 
         <button type="button" onclick="displayWelcome()">Start</button>
+
+        <img id = "tile" src = "placeholder.png" width = "36" height = "36">
 
     </body>
 
@@ -21,6 +25,10 @@
         var canvas = document.getElementById("myCanvas");
 
         var ctx = canvas.getContext("2d");
+
+        var img = new Image()
+
+        //var sprite = new Sprite(480, 480, "placeholder.png");
 
        
 
@@ -40,8 +48,15 @@
 
             ctx.fillText("Hello World!", 200, 100);
 
+            ctx.drawImage(img, 0, 0);
+
+            //sprite.display();
+
         }
 
+        
+
     </script>
+    
 
 </html>
